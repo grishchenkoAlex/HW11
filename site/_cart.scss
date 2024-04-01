@@ -1,0 +1,270 @@
+@keyframes Pulse_button {
+    0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+    }
+
+    10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+    }
+
+    17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+    }
+
+    33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+    }
+
+    45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+}
+
+
+$color-text: #000000;
+
+
+
+.top-cart {
+    height: 400px;
+    background-image: url(img/Basket_back.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heading_basket {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+    color: #FFFFFF;
+    padding-top: 127px;
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 32px;
+    margin-top: 64px;
+
+
+
+    &_name {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+    }
+
+    &_item {
+        border-top: 0.5px solid #CACDD8;
+        padding-bottom: 32px;
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &_left {
+        display: flex;
+        gap: 32px;
+    }
+
+    &_info {
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &_info-head {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: $color-text;
+    }
+
+    &_info-slogan {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #888888;
+    }
+
+    &_price {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #050505;
+    }
+
+    &_content {
+        grid-column: span 8;
+
+
+    }
+
+    &_form {
+        height: 556px;
+        background: #F7F6F6;
+        border-radius: 20px;
+        grid-column: span 4;
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &_heding {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: $color-text;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 42px;
+        padding-bottom: 10px;
+    }
+
+    &_price-form {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $color-text;
+        padding-top: 23px;
+    }
+
+    &_button-form {
+        border-radius: 50px;
+        border: 1px solid #050505;
+        box-sizing: border-box;
+        height: 46px;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+        width: 269px;
+        transition: all .3s;
+        position: relative;
+        animation: Pulse_button 3s cubic-bezier(0.11, 0, 0.5, 0) 0s infinite normal forwards;
+
+        &:hover {
+            background: #000;
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    &_button-box {
+        padding-top: 25px;
+    }
+
+    &_button-content {
+        border-radius: 50px;
+        border: 1px solid #050505;
+        box-sizing: border-box;
+        height: 32px;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000;
+        width: 180px;
+        transition: all .3s;
+
+        &:hover {
+            background: #000;
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    &_link-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &_link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 210%;
+        text-decoration-line: underline;
+        color: $color-text;
+    }
+
+    &_number {
+        background: #F7F6F6;
+        box-sizing: border-box;
+        border-radius: 6px;
+        height: 51px;
+        width: 71px;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 210%;
+        color: #000000;
+        padding-left: 16px;
+        padding-right: 16px;
+        align-items: center;
+        border: none;
+        outline: none;
+    }
+
+    &_input {
+        width: 288px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: #CACDD8;
+        border-bottom: 1px solid #CACDD8;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-text;
+        padding-right: 25px;
+        padding-bottom: 3px;
+        margin-bottom: 16px;
+    }
+
+    &_input::placeholder {
+        color: $color-text;
+    }
+}
+
+// .block_button-form {
+//     position: relative;
+// }
+
+.basket_product-box {
+    padding-top: 64px;
+}
+
+.basket_img {
+    transition: all .3s;
+    box-shadow: 10px 5px 5px #ccc;
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.basket_link-box {
+    padding-top: 33px;
+    padding-bottom: 64px;
+}
